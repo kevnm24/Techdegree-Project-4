@@ -10,6 +10,7 @@ class Game{
     let randomPhrase = phraseArray[Math.floor(Math.random() * phraseArray.length)];
     return randomPhrase;
   }
+// this function will call checkletter and will handle interactions when a letter is clicked
   handleInteraction(){
     var heart = this;
     var win = this;
@@ -25,6 +26,7 @@ class Game{
     }
   })
 }
+//this will remove a heart everytimeaplayer guesses a letter incorrect and will call gameover when there are no hearts left.
   removeLife(){
 		$('.tries:first').remove();
 		this.missed +=1
@@ -32,6 +34,7 @@ class Game{
 				this.gameOver();
 			}
 }
+// if player wins, win page will display and player willbe able to play again
   checkForWin(){
     if ($('.correct').length === $('.letter').length) {
       $('.tries').remove();
@@ -51,6 +54,7 @@ class Game{
       $('ol').append(`<li class="tries"><img src="images/liveHeart.png" height="35px" widght="30px"></li>`)
     }
 }
+//when player loses gameOver is called and resets game.
   gameOver(){
     $('.keyrow button').removeClass('phraseLetters')
     $('.keyrow button').removeClass('correct')

@@ -15,6 +15,7 @@ class Phrase {
       }
     }
   }
+  //this function checks if letter clicked is inside the phrase.
   checkLetter(){
     let show = this;
     $('.keyrow button').on('click',function(){
@@ -28,6 +29,7 @@ class Phrase {
       }
     })
 }
+// this will display hidden letter
   showMatchedLetter(){
       $('.correct').css('color', 'black');
       $('.correct').css('background-color', '#b5e3ff');
